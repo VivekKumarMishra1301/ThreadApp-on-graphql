@@ -1,0 +1,30 @@
+/.env
+/node_modules
+# Ignore built files
+dist/
+*.js
+*.js.map
+
+# Ignore TypeScript build cache
+*.tsbuildinfo
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore development dependencies
+*.log
+*.tsbuildinfo
+
+# Ignore IDE and editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.out
+
+# Ignore macOS specific files
+.DS_Store
+/build
