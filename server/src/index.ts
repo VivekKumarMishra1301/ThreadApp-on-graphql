@@ -21,12 +21,14 @@ async function startApp() {
             type Query{
 
                 hello:String
+                say(name:String):String
             }
         
         `,//schema
         resolvers: {
             Query: {
-                hello:()=>'Hello bro'
+                hello: () => 'Hello bro',
+                say:(_,{name}:{name:string})=>`Hey ${name}`
             }
         }
     });
