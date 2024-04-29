@@ -8,6 +8,15 @@ const queries = {
         });
         return token
     },
+    getCurrentLoggedInUser: async (_: any, parameters: any, context: any) => {
+        console.log(context)
+        if (context && context.user) {
+            const id = context.user.id;
+            const user = await UserService.getUserByID(id);
+            return user
+        }
+        throw new Error('Not Authorized User')
+    }
 };
 
 const mutations = {

@@ -70,7 +70,14 @@ class UserService{
 
     }
    
+    public static getUserByID(id: string) {
+        return prismaClient.user.findUnique({where:{id}})
+    }
 
+    public static decodeJWTToken(token: string) {
+        // console.log(token);
+        return JWT.verify(token,JWT_SECRET)
+    }
 
 
 
